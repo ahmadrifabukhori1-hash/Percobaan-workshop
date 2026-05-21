@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arbi | Cyberpunk Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            orbitron: ['Orbitron', 'sans-serif'],
+            inter: ['Inter', 'sans-serif']
+          },
+          colors: {
+            cyberYellow: '#fcee09',
+            cyberPink: '#ff003c',
+            cyberBlue: '#00f0ff',
+            cyberDark: '#070707',
+            cyberCard: '#111111'
+          },
+          boxShadow: {
+            cyber: '0 0 25px rgba(0, 240, 255, 0.45)',
+            pink: '0 0 25px rgba(255, 0, 60, 0.45)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(0, 240, 255, 0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(255, 0, 60, 0.18), transparent 30%),
+        #070707;
+    }
+
+    .glitch {
+      position: relative;
+      color: #fcee09;
+      text-shadow:
+        3px 3px #ff003c,
+        -3px -3px #00f0ff;
+    }
+
+    .scanline {
+      background-image: linear-gradient(
+        rgba(255, 255, 255, 0.03) 50%,
+        transparent 50%
+      );
+      background-size: 100% 4px;
+    }
+
+    .clip-cyber {
+      clip-path: polygon(0 0, 92% 0, 100% 18%, 100% 100%, 8% 100%, 0 82%);
+    }
+  </style>
+</head>
+
+<body class="font-inter text-white scanline">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur border-b border-cyberBlue/40">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="font-orbitron text-xl font-black text-cyberYellow">
+        ARBI<span class="text-cyberBlue">.DEV</span>
+      </h1>
+
+      <nav class="hidden md:flex gap-8 text-sm font-semibold">
+        <a href="#about" class="hover:text-cyberYellow">Tentang</a>
+        <a href="#skills" class="hover:text-cyberYellow">Skill</a>
+        <a href="#experience" class="hover:text-cyberYellow">Pengalaman</a>
+        <a href="#projects" class="hover:text-cyberYellow">Project</a>
+        <a href="#contact" class="hover:text-cyberYellow">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center pt-24 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <p class="text-cyberBlue font-orbitron tracking-widest mb-4">
+          NIGHT CITY DEVELOPER PROFILE
+        </p>
+
+        <h2 class="glitch font-orbitron text-5xl md:text-7xl font-black leading-tight mb-6">
+          ARBI
+        </h2>
+
+        <h3 class="text-2xl md:text-3xl font-bold mb-6">
+          Mahasiswa Teknik Informatika Semester 2
+          <span class="text-cyberYellow">UNUGIRI</span>
+        </h3>
+
+        <p class="text-gray-300 text-lg leading-relaxed mb-8">
+          Saya adalah mahasiswa TI yang memiliki dasar kuat di bidang
+          <span class="text-cyberBlue font-semibold">Rekayasa Perangkat Lunak</span>,
+          pengalaman magang di
+          <span class="text-cyberYellow font-semibold">Laboratorium Komputer</span>,
+          dan ketertarikan besar pada pengembangan website, sistem informasi,
+          serta teknologi digital modern.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="#projects"
+             class="clip-cyber bg-cyberYellow text-black px-8 py-3 font-orbitron font-bold hover:bg-cyberBlue transition">
+            LIHAT PROJECT
+          </a>
+
+          <a href="#contact"
+             class="clip-cyber border border-cyberBlue text-cyberBlue px-8 py-3 font-orbitron font-bold hover:bg-cyberBlue hover:text-black transition">
+            HUBUNGI SAYA
+          </a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -inset-2 bg-cyberBlue blur-2xl opacity-30"></div>
+
+        <div class="relative clip-cyber bg-cyberCard border border-cyberBlue p-8 shadow-cyber">
+          <div class="bg-black p-6 border border-cyberYellow">
+            <p class="font-orbitron text-cyberYellow text-sm mb-4">
+              USER DATA // ACTIVE
+            </p>
+
+            <div class="space-y-4 text-sm md:text-base">
+              <div class="flex justify-between border-b border-white/10 pb-2">
+                <span class="text-gray-400">Nama</span>
+                <span class="text-cyberBlue font-semibold">Arbi</span>
+              </div>
+
+              <div class="flex justify-between border-b border-white/10 pb-2">
+                <span class="text-gray-400">Status</span>
+                <span>Mahasiswa TI</span>
+              </div>
+
+              <div class="flex justify-between border-b border-white/10 pb-2">
+                <span class="text-gray-400">Semester</span>
+                <span>2</span>
+              </div>
+
+              <div class="flex justify-between border-b border-white/10 pb-2">
+                <span class="text-gray-400">Kampus</span>
+                <span>UNUGIRI</span>
+              </div>
+
+              <div class="flex justify-between border-b border-white/10 pb-2">
+                <span class="text-gray-400">Background</span>
+                <span>SMK RPL</span>
+              </div>
+
+              <div class="flex justify-between">
+                <span class="text-gray-400">Experience</span>
+                <span>Magang Labkom</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="font-orbitron text-4xl font-black text-cyberYellow mb-10">
+        01 // TENTANG SAYA
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2 bg-cyberCard border border-cyberBlue/50 p-8 clip-cyber shadow-cyber">
+          <p class="text-gray-300 leading-relaxed mb-5">
+            Halo, saya <span class="text-cyberYellow font-bold">Arbi</span>,
+            mahasiswa Teknik Informatika semester 2 di UNUGIRI. Saya memiliki
+            ketertarikan pada dunia teknologi sejak menempuh pendidikan di SMK
+            jurusan Rekayasa Perangkat Lunak.
+          </p>
+
+          <p class="text-gray-300 leading-relaxed mb-5">
+            Selama belajar di bidang RPL, saya mengenal dasar-dasar pemrograman,
+            perancangan aplikasi, basis data, dan pembuatan website. Pengalaman
+            tersebut menjadi fondasi saya untuk terus berkembang sebagai calon
+            developer.
+          </p>
+
+          <p class="text-gray-300 leading-relaxed">
+            Saya juga pernah menjalani magang di Laboratorium Komputer, yang
+            memberi pengalaman langsung dalam pengelolaan perangkat komputer,
+            instalasi software, troubleshooting dasar, serta membantu aktivitas
+            teknis di lingkungan lab.
+          </p>
+        </div>
+
+        <div class="bg-black border border-cyberPink/60 p-8 clip-cyber shadow-pink">
+          <h3 class="font-orbitron text-cyberPink text-xl font-bold mb-5">
+            FOKUS SAAT INI
+          </h3>
+
+          <ul class="space-y-4 text-gray-300">
+            <li>▸ Web Development</li>
+            <li>▸ UI/UX Design</li>
+            <li>▸ Sistem Informasi</li>
+            <li>▸ Database Management</li>
+            <li>▸ Problem Solving</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-24 px-6 bg-black/40">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="font-orbitron text-4xl font-black text-cyberYellow mb-10">
+        02 // SKILL MATRIX
+      </h2>
+
+      <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="bg-cyberCard border border-cyberBlue/40 p-6 hover:shadow-cyber transition">
+          <h3 class="font-orbitron text-cyberBlue font-bold mb-4">HTML</h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Membuat struktur halaman website yang rapi dan mudah dikembangkan.
+          </p>
+          <div class="w-full bg-gray-800 h-2">
+            <div class="bg-cyberBlue h-2 w-[85%]"></div>
+          </div>
+        </div>
+
+        <div class="bg-cyberCard border border-cyberBlue/40 p-6 hover:shadow-cyber transition">
+          <h3 class="font-orbitron text-cyberBlue font-bold mb-4">CSS / Tailwind</h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Mendesain tampilan website modern, responsif, dan menarik.
+          </p>
+          <div class="w-full bg-gray-800 h-2">
+            <div class="bg-cyberBlue h-2 w-[80%]"></div>
+          </div>
+        </div>
+
+        <div class="bg-cyberCard border border-cyberBlue/40 p-6 hover:shadow-cyber transition">
+          <h3 class="font-orbitron text-cyberBlue font-bold mb-4">PHP</h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Membuat logika backend sederhana dan pengolahan data.
+          </p>
+          <div class="w-full bg-gray-800 h-2">
+            <div class="bg-cyberBlue h-2 w-[70%]"></div>
+          </div>
+        </div>
+
+        <div class="bg-cyberCard border border-cyberBlue/40 p-6 hover:shadow-cyber transition">
+          <h3 class="font-orbitron text-cyberBlue font-bold mb-4">MySQL</h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Mengelola database untuk aplikasi dan sistem informasi.
+          </p>
+          <div class="w-full bg-gray-800 h-2">
+            <div class="bg-cyberBlue h-2 w-[75%]"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="font-orbitron text-4xl font-black text-cyberYellow mb-10">
+        03 // EXPERIENCE LOG
+      </h2>
+
+      <div class="space-y-8">
+
+        <div class="bg-cyberCard border-l-4 border-cyberYellow p-8 shadow-cyber">
+          <p class="font-orbitron text-cyberBlue text-sm mb-2">
+            INTERNSHIP EXPERIENCE
+          </p>
+
+          <h3 class="text-2xl font-bold mb-3">
+            Magang di Laboratorium Komputer
+          </h3>
+
+          <p class="text-gray-300 leading-relaxed mb-5">
+            Saat magang di Labkom, saya memperoleh pengalaman dalam membantu
+            operasional laboratorium komputer, melakukan pengecekan perangkat,
+            instalasi aplikasi, troubleshooting dasar, serta memastikan komputer
+            siap digunakan untuk kegiatan pembelajaran.
+          </p>
+
+          <div class="flex flex-wrap gap-3">
+            <span class="bg-cyberYellow text-black px-3 py-1 text-sm font-bold">Hardware Check</span>
+            <span class="bg-cyberBlue text-black px-3 py-1 text-sm font-bold">Software Install</span>
+            <span class="bg-cyberPink text-white px-3 py-1 text-sm font-bold">Troubleshooting</span>
+          </div>
+        </div>
+
+        <div class="bg-cyberCard border-l-4 border-cyberBlue p-8 shadow-cyber">
+          <p class="font-orbitron text-cyberBlue text-sm mb-2">
+            EDUCATION BACKGROUND
+          </p>
+
+          <h3 class="text-2xl font-bold mb-3">
+            Lulusan SMK Jurusan RPL
+          </h3>
+
+          <p class="text-gray-300 leading-relaxed">
+            Pendidikan SMK jurusan Rekayasa Perangkat Lunak memberikan saya
+            dasar dalam pemrograman, pembuatan aplikasi, database, dan
+            pengembangan website. Dari sini saya mulai memahami alur kerja
+            seorang developer.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-24 px-6 bg-black/40">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="font-orbitron text-4xl font-black text-cyberYellow mb-10">
+        04 // PROJECT DATABASE
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="bg-cyberCard border border-cyberBlue/50 p-6 clip-cyber hover:shadow-cyber transition">
+          <p class="font-orbitron text-cyberPink text-sm mb-3">PROJECT 001</p>
+          <h3 class="text-xl font-bold mb-3">Website Portofolio</h3>
+          <p class="text-gray-400 text-sm mb-5">
+            Website personal untuk menampilkan profil, pengalaman, skill, dan project.
+          </p>
+          <span class="text-cyberYellow font-semibold">HTML • Tailwind</span>
+        </div>
+
+        <div class="bg-cyberCard border border-cyberBlue/50 p-6 clip-cyber hover:shadow-cyber transition">
+          <p class="font-orbitron text-cyberPink text-sm mb-3">PROJECT 002</p>
+          <h3 class="text-xl font-bold mb-3">Sistem Informasi Sederhana</h3>
+          <p class="text-gray-400 text-sm mb-5">
+            Konsep aplikasi untuk mengelola data menggunakan form dan database.
+          </p>
+          <span class="text-cyberYellow font-semibold">PHP • MySQL</span>
+        </div>
+
+        <div class="bg-cyberCard border border-cyberBlue/50 p-6 clip-cyber hover:shadow-cyber transition">
+          <p class="font-orbitron text-cyberPink text-sm mb-3">PROJECT 003</p>
+          <h3 class="text-xl font-bold mb-3">UI Landing Page</h3>
+          <p class="text-gray-400 text-sm mb-5">
+            Desain halaman depan website modern dengan tampilan responsif.
+          </p>
+          <span class="text-cyberYellow font-semibold">UI/UX • Frontend</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="font-orbitron text-4xl font-black text-cyberYellow mb-6">
+        05 // CONNECT WITH ME
+      </h2>
+
+      <p class="text-gray-300 text-lg mb-10">
+        Saya terbuka untuk belajar, berkolaborasi, dan mengembangkan project
+        berbasis website maupun sistem informasi.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-10">
+
+        <div class="bg-cyberCard border border-cyberBlue p-6">
+          <h3 class="font-orbitron text-cyberBlue mb-2">EMAIL</h3>
+          <p class="text-gray-400">arbi@example.com</p>
+        </div>
+
+        <div class="bg-cyberCard border border-cyberBlue p-6">
+          <h3 class="font-orbitron text-cyberBlue mb-2">LOCATION</h3>
+          <p class="text-gray-400">Indonesia</p>
+        </div>
+
+        <div class="bg-cyberCard border border-cyberBlue p-6">
+          <h3 class="font-orbitron text-cyberBlue mb-2">STATUS</h3>
+          <p class="text-gray-400">Available to Learn</p>
+        </div>
+
+      </div>
+
+      <a href="mailto:arbi@example.com"
+         class="clip-cyber inline-block bg-cyberYellow text-black px-10 py-4 font-orbitron font-black hover:bg-cyberBlue transition">
+        SEND MESSAGE
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-cyberBlue/40 py-6 text-center bg-black">
+    <p class="text-gray-500 text-sm">
+      © 2026 Arbi Portfolio. Built with HTML + Tailwind CSS.
+    </p>
+  </footer>
+
+</body>
+</html>
